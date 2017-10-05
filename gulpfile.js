@@ -14,8 +14,7 @@ const gulp = require('gulp'),
     rename = require('gulp-rename'),
     stylelint = require('gulp-stylelint'),
     dest = require('gulp-dest'),
-    del = require('del'),
-    notify = require('gulp-notify');
+    del = require('del');
 
 const paths = {
     src: 'src/**/*',
