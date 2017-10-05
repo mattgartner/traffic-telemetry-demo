@@ -40,9 +40,9 @@ autoprefixer: PostCSS plugin to parse CSS and add vendor prefixes to CSS rules u
 
 gulp-sourcemaps: adds source map support to gulp [https://github.com/gulp-sourcemaps/gulp-sourcemaps]
 
-postcss-cssnext: helps you to use the latest CSS syntax today. It transforms CSS specs into more compatible CSS so you don’t need to wait for browser support. [https://www.npmjs.com/package/postcss-cssnext] **may include autoprefixer already - consider removing**
+postcss-cssnext: helps you to use the latest CSS syntax today. It transforms CSS specs into more compatible CSS so you don’t need to wait for browser support. [https://www.npmjs.com/package/postcss-cssnext] &#x1F534; **may include autoprefixer already - consider removing**
 
-postcss-scss: **may be unnecessary if moving just to PostCSS altogether - consider removing** main use case of this plugin is to apply PostCSS transformations directly to SCSS source code. For example, if you ship a theme written in SCSS and need Autoprefixer to add the appropriate vendor prefixes to it; or you need to lint SCSS with a plugin such as Stylelint [https://github.com/postcss/postcss-scss] 
+postcss-scss: &#x1F534; **may be unnecessary if moving just to PostCSS altogether - consider removing** main use case of this plugin is to apply PostCSS transformations directly to SCSS source code. For example, if you ship a theme written in SCSS and need Autoprefixer to add the appropriate vendor prefixes to it; or you need to lint SCSS with a plugin such as Stylelint [https://github.com/postcss/postcss-scss] 
 
 postcss-sorting: PostCSS plugin to keep rules and at-rules content in order [https://github.com/hudochenkov/postcss-sorting]
 
