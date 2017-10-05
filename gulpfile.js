@@ -1,19 +1,19 @@
 // includes and setup
 const gulp = require('gulp'),
     inject = require('gulp-inject'),
-    lite = require('lite-server'),
+    //lite = require('lite-server'),
     postcss = require('gulp-postcss'),
     cssnano = require('gulp-cssnano'),
     htmlmin = require('gulp-htmlmin'),
     uglify = require('gulp-uglify'),
     autoprefixer = require('autoprefixer'),
-    postcssutilities = require('postcss-utilities'),
+    //postcssutilities = require('postcss-utilities'),
     size = require('gulp-size'),
-    util = require('gulp-util'),
+    //util = require('gulp-util'),
     concat = require('gulp-concat'),
-    rename = require('gulp-rename'),
-    stylelint = require('gulp-stylelint'),
-    dest = require('gulp-dest'),
+    //rename = require('gulp-rename'),
+    //stylelint = require('gulp-stylelint'),
+    //dest = require('gulp-dest'), //may be unnecessary
     del = require('del'),
     sourcemaps = require('gulp-sourcemaps');
 
@@ -84,11 +84,11 @@ gulp.task('html:dist', () => {
   });
   gulp.task('css:dist', () => {
     return gulp.src(paths.srcCSS)
-      .pipe(sourcemaps.init())
+      //.pipe(sourcemaps.init())
       .pipe(concat('style.min.css'))
       .pipe(cssnano())
       .pipe(postcss([ autoprefixer() ]))
-      .pipe(sourcemaps.write())
+      //.pipe(sourcemaps.write())
       .pipe(gulp.dest(paths.dist + '/css/'));
   });
   gulp.task('js:dist', () => {
@@ -136,7 +136,7 @@ gulp.task('size:tmp', function() {
 });
 
 gulp.task('size:dist', function() {
-  return gulp.src('tmp/**/*')
+  return gulp.src('dist/**/*')
     .pipe(size({
         title: 'dist',
         showTotal: true, 
