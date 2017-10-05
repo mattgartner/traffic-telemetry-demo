@@ -79,7 +79,7 @@ gulp-watch: runs gulp-watch
 
 * &#x1F536; &nbsp; gulp-rename: simple plugin to rename files [https://www.npmjs.com/package/gulp-rename]
 
-* &#x1F535; &nbsp; gulp-size: logs out the total size of files in the stream and optionally the individual file-sizes.
+* &#x1F535; &nbsp; gulp-size: logs out the total size of files in the stream and optionally the individual file-sizes. [https://www.npmjs.com/package/gulp-size]
 
 * &#x1F536; &nbsp; gulp-stylelint: gulp wrapper for stylelint [https://github.com/stylelint/stylelint] [https://www.npmjs.com/package/gulp-stylelint]
 
