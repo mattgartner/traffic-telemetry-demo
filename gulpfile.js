@@ -14,7 +14,8 @@ const gulp = require('gulp'),
     rename = require('gulp-rename'),
     stylelint = require('gulp-stylelint'),
     dest = require('gulp-dest'),
-    del = require('del');
+    del = require('del'),
+    sourcemaps = require('gulp-sourcemaps');
 
 const paths = {
     src: 'src/**/*',
@@ -50,7 +51,9 @@ gulp.task('html', () => {
 });
 
 gulp.task('css', () => {
-    return gulp.src(paths.srcCSS).pipe(gulp.dest(paths.tmp));
+    return gulp.src(paths.srcCSS)
+    .pipe(postcss([ autoprefixer() ]))
+    .pipe(gulp.dest(paths.tmp));
 });
 
 gulp.task('js', () => {
@@ -73,8 +76,7 @@ gulp.task('inject', ['copy'], () => {
         .pipe(gulp.dest(paths.tmp));
 });
 
-//minify
-//move files to dist folder
+//minify and move files to dist folder
 gulp.task('html:dist', () => {
     return gulp.src(paths.srcHTML)
       .pipe(htmlmin())
@@ -82,8 +84,11 @@ gulp.task('html:dist', () => {
   });
   gulp.task('css:dist', () => {
     return gulp.src(paths.srcCSS)
+      .pipe(sourcemaps.init())
       .pipe(concat('style.min.css'))
       .pipe(cssnano())
+      .pipe(postcss([ autoprefixer() ]))
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest(paths.dist + '/css/'));
   });
   gulp.task('js:dist', () => {
