@@ -35,9 +35,9 @@ gulp-watch: runs gulp-watch
 * &#x1F535; &nbsp; gulp-uglify: JS minifier [https://www.npmjs.com/package/gulp-uglify]
 
 ## extensions
-* &#x1F536; &nbsp; autoprefixer: PostCSS plugin to parse CSS and add vendor prefixes to CSS rules using values from Can I Use. [https://github.com/postcss/autoprefixer]
+* &#x1F535; &nbsp; autoprefixer: PostCSS plugin to parse CSS and add vendor prefixes to CSS rules using values from Can I Use. [https://github.com/postcss/autoprefixer]
 
-* &#x1F536; &nbsp; gulp-sourcemaps: adds source map support to gulp [https://github.com/gulp-sourcemaps/gulp-sourcemaps]
+* &#x1F534; &nbsp; gulp-sourcemaps: adds source map support to gulp [https://github.com/gulp-sourcemaps/gulp-sourcemaps]
 
 * &#x1F536; &nbsp; postcss-cssnext: helps you to use the latest CSS syntax today. It transforms CSS specs into more compatible CSS so you don’t need to wait for browser support. [https://www.npmjs.com/package/postcss-cssnext] **may include autoprefixer already - consider removing**
 
