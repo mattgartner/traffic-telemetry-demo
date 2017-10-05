@@ -1,19 +1,13 @@
 // includes and setup
 const gulp = require('gulp'),
     inject = require('gulp-inject'),
-    //lite = require('lite-server'),
     postcss = require('gulp-postcss'),
     cssnano = require('gulp-cssnano'),
     htmlmin = require('gulp-htmlmin'),
     uglify = require('gulp-uglify'),
     autoprefixer = require('autoprefixer'),
-    //postcssutilities = require('postcss-utilities'),
     size = require('gulp-size'),
-    //util = require('gulp-util'),
     concat = require('gulp-concat'),
-    //rename = require('gulp-rename'),
-    //stylelint = require('gulp-stylelint'),
-    //dest = require('gulp-dest'), //may be unnecessary
     del = require('del'),
     sourcemaps = require('gulp-sourcemaps');
 
