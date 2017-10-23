@@ -57,7 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
-# tmp and dist directories
+# directories
 tmp/
 dist/
-
+test/
+.sass-cache/
