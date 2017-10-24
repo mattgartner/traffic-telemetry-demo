@@ -7,16 +7,12 @@
 		"start": "node index.js",
 		"clean": "rimraf ./dist && mkdir dist",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"css":
-			"postcss --use postcss-import --use postcss-cssnext --use cssnano -m --output ./dist/css/styles.css ./src/css/styles.css",
-		"watch:css":
-			"postcss --use postcss-import --use postcss-cssnext --use cssnano -m -w --output ./dist/css/styles.css ./src/css/styles.css",
-		"js":
-			"mkdir -p dist/js && uglifyjs ./src/js/*.js -c -o ./dist/js/scripts.min.js",
-		"browser-sync":
-			"browser-sync start --proxy 'localhost:5050' --files 'dist'",
-		"dev":
-			"node index.js & npm run js & npm run watch:css & npm run browser-sync"
+		"css": "postcss --use postcss-import --use postcss-cssnext --use cssnano -m --output ./dist/css/styles.css ./src/css/styles.css",
+		"watch:css": "postcss --use postcss-import --use postcss-cssnext --use cssnano -m -w --output ./dist/css/styles.css ./src/css/styles.css",
+		"js": "mkdir -p dist/js && uglifyjs ./src/js/*.js -c -o ./dist/js/scripts.min.js",
+		"js-copy": "cpx \"src/js/**/*.js\" \"dist/js/\"",
+		"browser-sync": "browser-sync start --proxy 'localhost:5050' --files 'dist'",
+		"dev": "node index.js & npm run js-copy & npm run watch:css & npm run browser-sync"
 	},
 	"repository": {
 		"type": "git",
@@ -31,6 +27,7 @@
 	"homepage": "https://github.com/mattgartner/starter-template#readme",
 	"devDependencies": {
 		"browser-sync": "^2.18.13",
+		"cpx": "^1.5.0",
 		"cssnano": "^3.10.0",
 		"postcss-cli": "^4.1.1",
 		"postcss-cssnext": "^3.0.2",

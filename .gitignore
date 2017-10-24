@@ -62,3 +62,6 @@ tmp/
 dist/
 test/
 .sass-cache/
+
+# misc
+.DS_Store
