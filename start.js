@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
 // =========================================== //
@@ -9,19 +9,19 @@ dotenv.load();
 // =========================================== //
 // ============ Connect to DB ================ //
 // =========================================== //
-mongoose.connect(process.env.DATABASE_URL, {
-  useMongoClient: true,
-  autoReconnect: true
-});
-mongoose.Promise = global.Promise;
-mongoose.connection.on("error", err => {
-  console.error(`🙅🏻 🚫 🙅🏻 🚫 🙅🏻 🚫 ‍‍🙅🏻 🚫 🙅🏻 → ${err.message}`);
-});
+// mongoose.connect(process.env.DATABASE_URL, {
+//   useMongoClient: true,
+//   autoReconnect: true
+// });
+// mongoose.Promise = global.Promise;
+// mongoose.connection.on("error", err => {
+//   console.error(`🙅🏻 🚫 🙅🏻 🚫 🙅🏻 🚫 ‍‍🙅🏻 🚫 🙅🏻 → ${err.message}`);
+// });
 
 // =========================================== //
 // ============ Import the models ============ //
 // =========================================== //
-require("./models/user");
+require("./models/list_sample");
 
 
 // =========================================== //
