@@ -1,14 +1,14 @@
 const express = require("express");
 const session = require("express-session");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 // const MongoStore = require("connect-mongo")(session);
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 // const passport = require("passport");
 // const flash = require("connect-flash");
-const expressValidator = require("express-validator");
-const request = require("request");
+// const expressValidator = require("express-validator");
+// const request = require("request");
 // const helpers = require("./helpers");
 const errorHandlers = require("./handlers/errorHandlers");
 // require("./handlers/passport");
@@ -33,7 +33,7 @@ app.use(
 );
 
 app.use(bodyParser.json());
-app.use(expressValidator());
+// app.use(expressValidator());
 // app.use(flash());
 // populates req.cookies with any cookies that came along with the request
 app.use(cookieParser());
@@ -56,11 +56,11 @@ app.use(cookieParser());
 // Checks if the user is logged in, and also passes through the current user, req.user, to every page.
 // Also passes flash messages
 app.use((req, res, next) => {
-  res.locals.h = helpers;
-  res.locals.flashes = req.flash();
-  res.locals.user = req.user || null;
-  res.locals.env = process.env;
-  res.locals.currentPath = req.path;
+  // res.locals.h = helpers;
+  // res.locals.flashes = req.flash();
+  // res.locals.user = req.user || null;
+  // res.locals.env = process.env;
+  // res.locals.currentPath = req.path;
   next();
 });
 
