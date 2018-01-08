@@ -2,10 +2,9 @@ doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
-    link(rel="stylesheet", href="/styles.css")
-
-      title Starter Template
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+    link(rel="stylesheet" href="/styles.css")
+    title !{title}
   body
     block main-content
       .content
@@ -25,12 +24,10 @@ html(lang="en")
           div.logo
           
           div.social-area.text-center
-            a.btn.btn-neutral.btn-round.btn-just-icon.btn-facebook.facebook-sharrre(href="#facebook") <i class="fab fa-facebook-f" aria-hidden="true"></i>
-            a.btn.btn-neutral.btn-round.btn-just-icon.btn-twitter.twitter-sharrre(href="#twitter") <i class="fab fa-twitter" aria-hidden="true"></i>
-            a.btn.btn-neutral.btn-just-icon.btn-round.btn-instagram(href="#instagram") <i class="fab fa-instagram" aria-hidden="true"></i>
+
 
     block scripts
-      script(src="/js/fontawesome-all.js")        
+      //- script(src="/js/fontawesome-all.js")        
       script(src="/vendor.bundle.js")        
       script(src="/template.bundle.js")
       
