@@ -10,6 +10,8 @@ const {catchErrors} = require("../handlers/errorHandlers");
 router.get("/", homeController.homepage);
 router.get("/test", homeController.test);
 router.get("/env-test", homeController.envtest);
+router.get("/env-test2", homeController.envtest2);
+
 
 // for logged in users
 // router.get("/home", authController.isLoggedIn, homeController.homepage);

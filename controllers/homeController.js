@@ -15,7 +15,11 @@ exports.test = (req, res) => {
 
 exports.envtest = (req, res) => {
   const env = process.env.TEST_ENV;
+  res.send(env);
+};
 
+exports.envtest2 = (req, res) => {
+  const env = process.env.MY_VAR;
   res.send(env);
 };
 
