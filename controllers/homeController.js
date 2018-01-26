@@ -13,6 +13,12 @@ exports.test = (req, res) => {
   });
 };
 
+exports.envtest = (req, res) => {
+  const env = process.env.TEST_ENV;
+
+  res.send(env);
+};
+
 exports.notfound = (req, res) => {
   res.render("error", {
     title: "Error - 404"

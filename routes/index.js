@@ -9,6 +9,7 @@ const {catchErrors} = require("../handlers/errorHandlers");
 // for logged out and/or unregistered users
 router.get("/", homeController.homepage);
 router.get("/test", homeController.test);
+router.get("/env-test", homeController.envtest);
 
 // for logged in users
 // router.get("/home", authController.isLoggedIn, homeController.homepage);
