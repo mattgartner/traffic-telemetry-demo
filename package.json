@@ -1,28 +1,11 @@
 {
-	"name": "starter-template",
+	"name": "api-call-cron-job",
 	"version": "1.0.0",
-	"description": "Starter template to bootstrap a new project",
+	"description": "description",
 	"main": "index.js",
 	"scripts": {
 		"start": "node start.js",
-		"start-prod": "NODE_ENV=production node start.js",
-		"clean": "rimraf ./dist/ && mkdir dist",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"css": "postcss --use postcss-import --use postcss-cssnext --use cssnano -m --output ./dist/css/styles.min.css ./src/css/styles.css",
-		"watch:css": "postcss --use postcss-import --use postcss-cssnext --use cssnano -m -w --output ./dist/css/styles.min.css ./src/css/styles.css",
-		"js": "mkdir -p dist/js && uglifyjs ./src/js/autocomplete.js -c -o ./dist/js/autocomplete.min.js && uglifyjs ./src/js/parallax.js -c -o ./dist/js/parallax.min.js && uglifyjs ./src/js/scripts.js -c -o ./dist/js/scripts.min.js",
-		"images": "cpx \"src/img/**/*.{png,jpg,gif,svg,jpeg}\" \"dist/img/\"",
-		"js-copy": "cpx \"src/js/static/*.js\" \"dist/js/\"",
-		"favicons": "cpx \"src/*.{png,xml,ico,json,svg}\" \"dist/\"",
-		"css-copy": "cpx \"src/*.css\" \"dist/\"",
-		"browser-sync": "browser-sync start --proxy 'localhost:3000' --files 'dist'",
-		"watch": "nodemon start.js --ignore src/",
-		"assets": "webpack -w --display-max-modules 0",
-		"dev": "concurrently \"node start\" \"npm run browser-sync\" \"npm run assets\" --names '💻,📦' --prefix name",
-		"heroku-postbuild": "npm run images & npm run favicons & npm run js-copy & npm run css-copy & npm run webpack-prod",
-		"sample": "node ./data/load-sample-data.js",
-		"blowitallaway": "node ./data/load-sample-data.js --delete",
-		"webpack-prod": "webpack -p"
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
@@ -36,39 +19,15 @@
 	},
 	"homepage": "https://github.com/mattgartner/starter-template#readme",
 	"devDependencies": {
-		"browser-sync": "^2.23.2",
 		"nodemon": "^1.14.7",
-		"prettier": "^1.9.2",
-		"rimraf": "^2.6.2"
+		"@google-cloud/nodejs-repo-tools": "1.4.17"
 	},
 	"dependencies": {
-		"autoprefixer": "^7.2.4",
 		"axios": "^0.17.1",
-		"babel-core": "^6.26.0",
-		"babel-loader": "^7.1.2",
-		"babel-preset-env": "^1.6.1",
+		"@google-cloud/pubsub": "0.13.2",
+		"safe-buffer": "5.1.1",
 		"body-parser": "^1.18.2",
-		"connect-mongo": "^2.0.0",
-		"cookie-parser": "^1.4.3",
-		"cpx": "^1.5.0",
-		"css-loader": "^0.28.7",
-		"dotenv": "^4.0.0",
 		"express": "4.16.2",
-		"express-session": "^1.15.6",
-		"express-validator": "^4.3.0",
-		"extract-text-webpack-plugin": "^3.0.2",
-		"file-loader": "^1.1.6",
-		"fs": "0.0.1-security",
-		"mongoose": "^4.13.8",
-		"node-sass": "^4.7.2",
-		"optimize-css-assets-webpack-plugin": "^3.2.0",
-		"path": "^0.12.7",
-		"postcss-loader": "^2.0.10",
-		"pug": "^2.0.0-rc.4",
-		"sass-loader": "^6.0.6",
-		"uglify-js": "^3.3.4",
-		"url-loader": "^0.6.2",
-		"validator": "^9.2.0",
-		"webpack": "^3.10.0"
+		"pug": "^2.0.0-rc.4"
 	}
 }

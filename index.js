@@ -3,8 +3,6 @@ var app = express();
 
 app.set("port", process.env.PORT || 5050);
 
-app.use(express.static("dist"));
-
 // views is directory for all template files
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");

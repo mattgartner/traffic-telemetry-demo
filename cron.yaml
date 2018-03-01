@@ -1,0 +1,13 @@
+cron:
+- description: "chicago API call every 15 min"
+  url: /chicago
+  schedule: every 15 minutes
+  retry_parameters:
+   min_backoff_seconds: 10
+   max_doublings: 2
+- description: "Streaming generation every 30 min"
+  url: /streaming?generate=600
+  schedule: every 5 minutes
+  retry_parameters:
+   min_backoff_seconds: 10
+   max_doublings: 2

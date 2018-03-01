@@ -1,30 +1,14 @@
-const mongoose = require("mongoose");
-// const List = mongoose.model("List");
-
 exports.homepage = async(req, res) => {
-  res.render("home", {
-    title: "Home"
-  });
+  res.send("Hello World.");
 };
 
-exports.test = (req, res) => {
-  res.render("test", {
-    title: "Test"
-  });
+exports.denverreport = async(req, res) => {
+  res.render("denver-report");
 };
-
-exports.envtest = (req, res) => {
-  const env = process.env.TEST_ENV;
-  res.send(env);
-};
-
-exports.envtest2 = (req, res) => {
-  const env = process.env.MY_VAR;
-  res.send(env);
+exports.chicagoreport = async(req, res) => {
+  res.render("chicago-report");
 };
 
 exports.notfound = (req, res) => {
-  res.render("error", {
-    title: "Error - 404"
-  });
+  res.status(404).send('Sorry, we cannot find that!');
 };
