@@ -7,7 +7,7 @@ exports.chicago = (req, res) => {
   const PUBSUB_VERIFICATION_TOKEN = process.env.PUBSUB_VERIFICATION_TOKEN;
   const config = {
     headers: {
-      'X-App-Token': 'HksETOd2xvjoVjg2F2HUdwfPH'
+      'X-App-Token': process.env.API_TOKEN
     }
   };
   axios
